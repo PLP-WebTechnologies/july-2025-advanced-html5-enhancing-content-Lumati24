@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&L registration form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #aaa;
+            text-align: left;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Info & Registration Page</h1>
+</header>
+
+<main>
+
+    <!-- List Section -->
+    <section>
+        <h2>Benefits of Our Services</h2>
+        <ul>
+            <li>High-quality support and customer care</li>
+            <li>Flexible and affordable plans</li>
+            <li>Access to exclusive content</li>
+            <li>24/7 availability</li>
+        </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Pricing Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>Ksh 1000</td>
+                    <td>Email Support</td>
+                </tr>
+                <tr>
+                    <td>Pro</td>
+                    <td>Ksh 2500</td>
+                    <td>Email + Chat Support</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>Ksh 5000</td>
+                    <td>All Support Channels</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Watch Our Intro Video</h2>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Calvin Lumati" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?\d{10,15}$" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" minlength="4" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">--Select Country--</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label for="website">Website (Optional)</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 C&L LTD</p>
+</footer>
+
+</body>
+</html>
